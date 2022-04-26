@@ -1,0 +1,172 @@
+.form-wrapper {
+  padding: 0 0;
+}
+
+.two-fields {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.two-fields .form-field {
+  width: 50%;
+}
+
+#first-name {
+  margin-right: 5px;
+}
+
+#last-name {
+  margin-left: 5px;
+}
+
+.form-field {
+  font-size: calc(0.2vw + 1vh + 1vmin);
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  width: 100%;
+}
+
+input,
+select {
+  padding: 0.5em 0 0.5em 0;
+  border: 0;
+  border-radius: 0;
+  border-bottom: 1px solid #141414;
+  background: transparent;
+  width: 100%;
+  transition: 0.2s;
+
+  z-index: 100;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-position: 98% 50%;
+  background-repeat: no-repeat;
+  background-image: url(assets/arrow.png);
+  background-size: 3%;
+  cursor: pointer;
+}
+
+label {
+  position: absolute;
+  pointer-events: none;
+}
+
+input:focus + label,
+input:active + label,
+input:valid + label,
+select:focus + label,
+select:active + label,
+select:valid + label {
+  top: -10px;
+  margin: 15px 0 0 0;
+  font-size: 12px;
+}
+
+input:focus,
+input:active,
+input:valid,
+select:focus,
+select:active,
+select:valid {
+  margin-top: 15px;
+  outline: none;
+}
+
+/* Change Autocomplete styles in Chrome*/
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border-bottom: 1px solid #141414;
+  -webkit-text-fill-color: #141414;
+  -webkit-box-shadow: 0 0 0px 1000px rgb(249, 247, 243) inset;
+}
+
+button {
+  font-size: 1.23rem;
+  padding: 0.8rem 2rem;
+  cursor: pointer;
+  margin: 2rem 0 0 0;
+  border: none;
+  background: var(--blue);
+  color: var(--white);
+  transition: background-color 0.2s linear;
+
+  display: block;
+  align-self: flex-start;
+}
+
+button:hover {
+  background: #005c7a;
+  color: var(--white);
+}
+
+.t-size .form-field {
+  max-width: 50%;
+  margin-top: 3rem;
+}
+
+/* validate non required fields*/
+#address-two + label {
+  top: 10px;
+  font-size: calc(0.2vw + 1vh + 1vmin);
+}
+
+#address-two-label.valid-form {
+  top: -10px;
+  margin: 15px 0 0 0;
+  font-size: 12px;
+}
+
+#email + label {
+  top: 10px;
+  /*   margin: 10px 0 0 0; */
+  font-size: calc(0.2vw + 1vh + 1vmin);
+}
+
+#email-label.valid-form {
+  top: -10px;
+  margin: 15px 0 0 0;
+  font-size: 12px;
+}
+
+@media only screen and (max-width: 1536px) {
+  .form-field,
+  #address-two + label,
+  #email + label {
+    font-size: calc(0.8vw + 1vh + 1vmin);
+  }
+}
+
+@media only screen and (max-width: 540px) {
+  .form-field,
+  #address-two + label,
+  #email + label {
+    font-size: 24px;
+  }
+
+  .two-fields {
+    flex-direction: column;
+  }
+
+  .two-fields .form-field {
+    width: 100%;
+  }
+
+  select {
+    background-size: 5%;
+  }
+
+  .t-size .form-field {
+    max-width: 100%;
+  }
+}
