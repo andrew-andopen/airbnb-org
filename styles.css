@@ -19,7 +19,7 @@
 
 :root {
   --blue: #004156;
-  --blue-light: rgba(0, 92, 122, 0.18);
+  --blue-light: #deeaf0;
   --black: #222222;
   --white: #ffffff;
   --transparent: #2eb8ea00;
@@ -100,10 +100,6 @@ header {
 
 .success {
   height: 100vh;
-}
-
-.sub {
-  margin: 14rem 0 0rem 0;
 }
 
 .user-details {
