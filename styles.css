@@ -149,6 +149,7 @@ footer {
 
 .success-container {
   max-width: 60rem;
+  color: var(--blue-light);
 }
 
 @media (max-width: 1440px) {
