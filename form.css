@@ -88,7 +88,7 @@ select:-webkit-autofill:hover,
 select:-webkit-autofill:focus {
   border-bottom: 1px solid #141414;
   -webkit-text-fill-color: #141414;
-  -webkit-box-shadow: 0 0 0px 1000px rgb(249, 247, 243) inset;
+  /* -webkit-box-shadow: 0 0 0px 1000px rgb(249, 247, 243) inset; */
 }
 
 button {
